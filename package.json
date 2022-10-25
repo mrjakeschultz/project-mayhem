@@ -1,0 +1,23 @@
+{
+  "name": "project-mayhem",
+  "version": "1.0.0",
+  "description": "Main repo for PawSafe Health app projet",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrjakeschultz/project-mayhem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrjakeschultz/project-mayhem/issues"
+  },
+  "homepage": "https://github.com/mrjakeschultz/project-mayhem#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}
