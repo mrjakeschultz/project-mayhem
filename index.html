@@ -19,7 +19,7 @@
         theme: {
           extend: {
             colors: {
-              pinkish: "#f66e9",
+              pinkish: "#f66e96",
               blueish: "#646491",
               yellowish: "#ffd768",
               light_blueish: "#c5cede",
@@ -35,66 +35,445 @@
   </head>
 
   <body class="p-4">
-    <header class="bg-slate-200">
+    <header class="">
       <div class="flex bg-yellowish" id="headmain">
         <img
           class="h-8 w-auto sm:h-10"
-          src="https://placehold.jp/400x400.png"
+          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
           alt="Paw and Pill in a Shape of a Heart"
         />
         <h1 class="font-poppins text-3xl" id="banner">PawSafe Health</h1>
       </div>
       <div>
-        <p class="w-70 text-sm ml-4" id="slogan">Pet Medication Management</p>
+        <p class="bg-yellowish w-70 text-sm" id="slogan">
+          Pet Medication Management
+        </p>
       </div>
 
-	  <!-- WEATHER CONTAINER ...................WEATHER CONTAINER .......................--> 
+      <!-- WEATHER CONTAINER ...................WEATHER CONTAINER .......................-->
 
-      <div
-        class="bg-purple-700 flex justify-center" id="weatherDashboardContainer">
-<div class=" border-gray-100 bg-gray-50 " id="weatherCard">
-        <h2>Weather in Austin</h2>
-        <h3>Temperature:</h3>
-        <h3>Air Quality:</h3>
+      <div class="flex justify-center" id="weatherDashboardContainer">
+        <div class="border-gray-100 bg-gray-50" id="weatherCard">
+          <h2 class="font-poppins text-xl">Weather in Austin</h2>
+          <h3>Temperature:</h3>
+          <h3>Air Quality:</h3>
+        </div>
       </div>
-	  </div>
+    </header>
 
+    <!-- END OF HEADER END OF HEADER END OF HEADER END OF HEADER END OF HEADER -->
 
-	  <!-- NAVIGATION CONTAINER -->
+    <nav>
+      <!-- NAVIGATION CONTAINER -->
 
-
-
-      <div class="flex mt-4 bg-green-100 justify-center" id="nav">
-        <div
-          class="bg-fuchsia-500 md:ml-10 md:block md:space-x-8 md:pr-4"
-          id="navBar"
-        >
+      <div class="bg-yellowish flex mt-4 justify-center" id="navContainer">
+        <div class="md:ml-10 md:block md:space-x-8 md:pr-4" id="navBar">
           <a
             href="#"
-            class="px-3 py-2 text-blue-100 no-underline bg-blue-500 rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
+            class="px-3 py-2 text-blue-100 no-underline bg-pinkish rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
             >HOME
           </a>
           <a
             href="#"
-            class="px-3 py-2 text-blue-100 no-underline bg-blue-500 rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
+            class="px-3 py-2 text-blue-100 no-underline bg-pinkish rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
             >ABOUT
           </a>
           <a
             href="#"
-            class="px-3 py-2 text-blue-100 no-underline bg-blue-500 rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
+            class="px-3 py-2 text-blue-100 no-underline bg-pinkish rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
             >HOW TO
           </a>
           <p id="currentDay"></p>
         </div>
       </div>
-    </header>
+    </nav>
 
-	<!-- END OF HEADER END OF HEADER END OF HEADER END OF HEADER END OF HEADER -->
+    <main class="mt-8 bg-red-400 flex justify-center container">
+      <section class="bg-slate-400 m-4 mt-4 border rounded" id="amTimes">
+        <div class=" bg-yellowish  flex justify-center rounded row m-2 2 2 2">
+          <div class="time-block hour" id="1">12:00 AM</div>
+          <div class="time-slot">
+            <textarea
+              class="rounded"
+              id="twelveAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="saveBtn">
+            <button
+              id="12am"
+              class="bg-blueish hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="time-block hour" id="2">1:00 AM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="oneAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="1am" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="3">2:00 AM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="twoAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="2am" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="4">3:00 AM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="threeAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="3am" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="5">4:00 AM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="fourAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="4am" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="6">5:00 AM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="fiveAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="5am" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="7">6:00 AM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="sixAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="6am" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="8">7:00 AM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="sevenAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="7am" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="9">8:00 AM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="eightAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="8am" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="10">9:00 AM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="nineAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="9am" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="11">10:00 AM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="tenAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="10am" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="12">11:00 AM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="elevenAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="11am" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+      </section>
 
-	
+      <!-- SECTION 2 -->
+
+      <section class="bg-slate-200 m-4 mt-4 border rounded" id="pmTimes">
+        <div class="row">
+          <div class="time-block hour" id="1">12:00 PM</div>
+          <div class="time-slot">
+            <textarea
+              class="rounded-xl"
+              id="twelveAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="saveBtn">
+            <button
+              id="12pm"
+              class="bg-blueish hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="time-block hour" id="2">1:00 PM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="oneAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="1pm" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="3">2:00 PM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="twoAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="2pm" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="4">3:00 PM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="threeAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="3pm" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="5">4:00 PM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="fourAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="4pm" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="6">5:00 PM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="fiveAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="5pm" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="7">6:00 PM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="sixAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="6pm" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="8">7:00 PM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="sevenAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="7pm" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="9">8:00 PM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="eightAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="8pm" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="10">9:00 PM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="nineAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="9pm" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="11">10:00 PM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="tenAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="10pm" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2 time-block hour" id="12">11:00 PM</div>
+          <div class="col-8 time-slot">
+            <textarea
+              id="elevenAm"
+              placeholder="Add events here"
+              class="calendar-item"
+              rows="3"
+              cols="48"
+            ></textarea>
+          </div>
+          <div class="col-2 saveBtn">
+            <button id="11pm" class="btn btn-secondary">Save</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-5 mb-b border-t border-slate-200" id="footerContainer">
+      <h5>Copyright © 2022 ProjectMayhem UTA BootCamp.</h5>
+    </footer>
   </body>
-  <footer class="mt-5 mb-b border-t border-slate-200" id="footerContainer">
-<h5>Copyright © 2022 ProjectMayhem UTA BootCamp.</h5>
-  </footer>
+
   <script src="./assets/js/script.js"></script>
 </html>
