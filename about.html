@@ -5,42 +5,110 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>About PawSafe Health</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+		  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+		  rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./assets/css/about.css" />
-	</head>
+		<script>
+			tailwind.config = {
+			  theme: {
+				extend: {
+				  colors: {
+					pinkish: "#f66e96",
+					blueish: "#646491",
+					yellowish: "#ffd768",
+					light_blueish: "#c5cede",
+					blackish: "#3a3a38",
+				  },
+				  fontFamily: {
+					poppins: "'Poppins', sans-serif",
+				  },
+				},
+			  },
+			};
+		  </script>
 
-	<body>
-		<div class="header">
-				<h2>About PawSafe Health</h2>
+	</head>
+	
+	<body class=>
+		<div class="bg-yellowish p-8 text-center text-4xl rounded-md" id="header">
+				<h2 class="font-poppins font-bold text-blackish text-4xl">About PawSafe Health</h2>
 			  </div>
+			  <nav>
+
+			  </nav>
 			  
 			  <div class="row">
 				<div class="leftcolumn">
 				  <div class="card">
-					<h2>Who We Are!</h2>
-					<h4>A little about our team..</h4>
-					<div class="img" style="height:200px;width:100%";>Image</div>
+					<h4 class="font-poppins font-bold text-pinkish">INTRODUCING...</h4>
+					<h2 class="font-poppins ml-4 text-2xl text-blackish font-bold">Who We Are!</h2>
+					
+					<ul class="flex space-x-6">
+						<li class="flex flex-col items-center space-y-3">
+							<a class="block bg-white p-1 rounded-full" href="#">
+								<img class="rounded-full" src="https://via.placeholder.com/200" alt="cute drawing">
+								<a class="font-poppins text-blueish font-bold" href="#">JAKE </a>
+							</a>
+						</li>
+						<li class="flex flex-col items-center space-y-3">
+							<a class="block bg-white p-1 rounded-full" href="#">
+								<img class="rounded-full" src="https://via.placeholder.com/200" alt="cute drawing">
+								<a class="font-poppins text-blueish font-bold" href="#">JAKE  </a>
+							</a>
+						</li>
+						<li class="flex flex-col items-center space-y-3">
+							<a class="block bg-white p-1 rounded-full" href="#">
+								<img class="rounded-full" src="https://via.placeholder.com/200" alt="cute drawing">
+								<a class="font-poppins text-blueish font-bold" href="#">KHI</a>
+							</a>
+						</li>
+						<li class="flex flex-col items-center space-y-3">
+							<a class="block bg-white p-1 rounded-full" href="#">
+								<img class="rounded-full" src="https://via.placeholder.com/200" alt="cute drawing">
+								<a class="font-poppins text-blueish font-bold" href="#">DIANA</a>
+							</a>
+						</li>
+						<li class="flex flex-col items-center space-y-3">
+							<a  class="block bg-white p-1 rounded-full" href="#">
+								<img class="rounded-full" src="https://via.placeholder.com/200" alt="cute drawing">
+								<a class="font-poppins text-blueish font-bold" href="#">BILLY</a>
+							</a>
+						</li>
+						<li class="flex flex-col items-center space-y-3">
+							<a  class="block bg-white p-1 rounded-full" href="#">
+								<img class="rounded-full" src="https://via.placeholder.com/200" alt="cute drawing">
+								<a class="font-poppins text-blueish font-bold" href="#">SHAWN</a>
+							</a>
+						</li>
+						
+					</ul>
+					<!-- <div class="img" style="height:200px;width:100%";>Image</div> -->
 					<br>
-					<p>PawSafe Health is a collaboration of the minds of the Jakes (yes, there are two of them!), Khi, Diana, Billy, and Shawn. We gathered together in the fall of 
+					<p class="font-bold">PawSafe Health is a collaboration of the minds of the Jakes (yes, there are two of them!), Khi, Diana, Billy, and Shawn. We gathered together in the fall of 
 						2022 from all across the country with one goal in mind. Yes, all of our passions pointed straight toward the heart of an issue
 						that is dear to many hearts. That is, of course, making sure your furry friends receive the care they need when they need it! 
 					</p>
 				  </div>
-				  <div class="card">
-					<h2>What is PawSafe Health?</h2>
-					<h4>We were hoping you'd ask!</h4>
-					<div class="img"><img src="./assets/images/cats-and-dogs-together-white-web-banner-good-focused.jpg" style="height:300px;width:100%";></div>
+				  <div class="flex flex-col" id="card">
+					<h4 class="font-poppins font-bold text-pinkish">WE WERE HOPING YOU'd ASK...</h4>
+					<h2 class="font-poppins  text-2xl text-blackish font-bold"">What is PawSafe Health?</h2>
+					
+					<div class="img"><img class="rounded-xl" src="./assets/images/cats-and-dogs-together-white-web-banner-good-focused.jpg" style="height:300px;width:100%";></div>
 					<br>
-					<p>We know the hustle and bustle of daily life is difficult just taking care of yourself, and adding a family pet that needs a little 
+					<p  class="font-bold">We know the hustle and bustle of daily life is difficult just taking care of yourself, and adding a family pet that needs a little 
 						extra help to the equation doesn't always make it easier! PawSafe Health can be your go-to when it comes to remembering what prescriptions
 						to give your fur-babies, and the best times to be reminded. You'll be able to use PawSafe Health's handy scheduler to input the time, as
 						well as the prescriptions and dosages so you don't forget.
 					</p>
 				  </div>
 				</div>
-				<div class="rightcolumn">
+				<div class="mt-4 flex  flex-col space-y-4" id="rightcolumn">
 					
-				  <div class="card">
-					<h2>Meet Our Inspirations!</h2>
+				  <div class=" bg-blueish flex flex-col items-center space-y-1 rounded-xl" id="card">
+					<h2 class="font-poppins font-bold">Meet Our Inspirations!</h2>
 					<img src="./assets/images/beau.jpeg" style="width:270px;height:180px;" alt="Shawn's Dog, Beau"></img><br>
 					Beau - Shawn's PIC<br><br>
 					<img src="./assets/images/Bodie.jpg" style="width:270px;height:300px;" alt="Jake's Doggo, Bodie"></img><br>
@@ -49,41 +117,46 @@
 					Diana's pups!<br><br>
 					
 				  </div>
-				  <div class="card">
-					<h3>Check Out Our Team!</h3>
-					<p>Jake L:
-						<ul> 
-							<li>Github - <a href="https://github.com/mrjakeschultz/">mrjakeschultz</a></li>
-							<li><a href="https://www.linkedin.com/in/jake-liefschultz-375746115/">LinkedIn<a></li>
-						</ul>
-					<p>Khi:
-						<ul> 
-							<li>Github - <a href="https://github.com/Khiaotic/">Khiaotic</a></li>
-							<li><a href="">LinkedIn<a></li>
-						</ul>	
-					<p>Jake S:
-						<ul>
-							<li>GitGub - <a href="https://github.com/jsadowski7/">jsadowski7</a></li>
-							<li><a href="https://www.linkedin.com/in/jake-sadowski-6b9385255/">LinkedIn</a></li>
-						</ul>
-					<p>Diana:
-						<ul>
-							<li>Github - <a href="https://github.com/dianamacias1218/">dianamacias1218</a></li>
-							<li><a href="www.linkedin.com/in/diana-macías-castillo-15588b1a8">LinkedIn</a></li>
-						</ul>
-					<p>Billy:
-						<ul>
-							<li>Github - <a href="https://github.com/bill6653/">bill6653</a></li>
-							<li><a href="https://www.linkedin.com/in/billy-crouch-0a9564255">LinkedIn</a></li>
-						</ul>
-					<p>Shawn:
-						<ul>
-							<li>GitHub - <a href="https://github.com/shwnsmith12/">shwnsmith12</a></li>
-							<li><a href="https://www.linkedin.com/in/shwnsmith12/">LinkedIn</a></li>
-						</ul>
-				  </div>
+				  
 				</div>
 			  </div>
-
+<footer class="mt-6 bg-yellowish">
+	<div class="" id="card">
+		<h3 class="font-poppins font-bold text-blackish text-3xl text-center">Check Out Our Team!</h3>
+		<ul class="flex space-x-6 space-y-6">
+		<p>Jake L:
+			<ul> 
+				<li>Github - <a href="https://github.com/mrjakeschultz/">mrjakeschultz</a></li>
+				<li><a href="https://www.linkedin.com/in/jake-liefschultz-375746115/">LinkedIn<a></li>
+			</ul>
+		<p>Jake S:
+				<ul>
+					<li>GitGub - <a href="https://github.com/jsadowski7/">jsadowski7</a></li>
+					<li><a href="https://www.linkedin.com/in/jake-sadowski-6b9385255/">LinkedIn</a></li>
+				</ul>
+		<p>Khi:
+			<ul> 
+				<li>Github - <a href="https://github.com/Khiaotic/">Khiaotic</a></li>
+				<li><a href="">LinkedIn<a></li>
+			</ul>	
+		
+		<p>Diana:
+			<ul>
+				<li>Github - <a href="https://github.com/dianamacias1218/">dianamacias1218</a></li>
+				<li><a href="www.linkedin.com/in/diana-macías-castillo-15588b1a8">LinkedIn</a></li>
+			</ul>
+		<p>Billy:
+			<ul>
+				<li>Github - <a href="https://github.com/bill6653/">bill6653</a></li>
+				<li><a href="https://www.linkedin.com/in/billy-crouch-0a9564255">LinkedIn</a></li>
+			</ul>
+		<p>Shawn:
+			<ul>
+				<li>GitHub - <a href="https://github.com/shwnsmith12/">shwnsmith12</a></li>
+				<li><a href="https://www.linkedin.com/in/shwnsmith12/">LinkedIn</a></li>
+			</ul>
+		</ul>
+	  </div>
+</footer>
 	</body>
 </html>
