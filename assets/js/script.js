@@ -2,6 +2,13 @@ fetch("https://swapi.dev/api/species?page=1")
 	.then((response) => response.json())
 	.then((data) => console.log(data));
 
+//Autocomplete widget for modal meds input
+$("#drug_name").autocomplete({
+	search: function (event, ui) {
+		speciesArrays;
+	},
+});
+
 // OpenWeather API One Day Forecast call
 var APIKey = "655f440e2edd3fdcfbfbcd81a9465bc3";
 var units = "units=imperial&";
@@ -47,11 +54,12 @@ function displayWeather(data) {
 
 // Display SW API results
 
-const promises = [];
-
 getSpeciesArray();
 
+let speciesArrays = [];
+
 function getSpeciesArray() {
+	const promises = [];
 	for (let i = 1; i <= 4; i++) {
 		const url = `https://swapi.dev/api/species?page=${i}`;
 
@@ -59,10 +67,24 @@ function getSpeciesArray() {
 
 		promises.push(promise); //find remainder
 	}
-	Promise.all(promises)
-		.then((speciesOverallArray) => speciesOverallArray.map((x) => x.results))
-		.then((speciesIndividualArrays) => console.log(speciesIndividualArrays));
+	Promise.all(promises).then((speciesOverallArray) => {
+		speciesArrays = speciesOverallArray
+			.map((x) => x.results.map((x) => x.name))
+			.flat();
+		useMyVar(speciesArrays);
+	});
 }
+
+function useMyVar(myParameter) {
+	console.log(
+		"🚀 ~ file: script.js ~ line 71 ~ callMyVar ~ myParameter",
+		myParameter
+	);
+}
+
+// .then((speciesIndividualArrays) =>
+
+// console.log(speciesIndividualArrays));
 
 // const arr1 = [0, 1, 2, [3, 4]];
 
