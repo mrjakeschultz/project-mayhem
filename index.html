@@ -34,27 +34,27 @@
     </script>
   </head>
 
-  <body class="p-4">
+  <body class="bg-light_blueish p-4">
     <header class="">
-      <div class="flex bg-yellowish" id="headmain">
+      <div class=" flex bg-yellowish p-8 justify-center text-4xl text-blackish rounded-md" id="headmain">
         <img
           class="h-8 w-auto sm:h-10"
           src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
           alt="Paw and Pill in a Shape of a Heart"
         />
-        <h1 class="font-poppins text-3xl" id="banner">PawSafe Health</h1>
+        <h1 class="font-poppins font-bold text-4xl" id="banner">PawSafe Health</h1>
       </div>
       <div>
-        <p class="bg-yellowish w-70 text-sm" id="slogan">
+        <p class="text-pinkish font-bold w-70 text-center " id="slogan">
           Pet Medication Management
         </p>
       </div>
 
       <!-- WEATHER CONTAINER ...................WEATHER CONTAINER .......................-->
 
-      <div class="flex justify-center" id="weatherDashboardContainer">
-        <div class="border-gray-100 bg-gray-50" id="weather">
-          <h2 class="font-poppins text-xl">Weather in Austin</h2>
+      <div class="flex justify-center bg-red-500" id="weatherDashboardContainer">
+        <div class=" bg-gray-50" id="weather">
+          <h2 class="font-poppins text-2xl">Weather in Austin</h2>
         </div>
       </div>
     </header>
@@ -68,19 +68,14 @@
         <div class="md:ml-10 md:block md:space-x-8 md:pr-4" id="navBar">
           <a
             href="#"
-            class="px-3 py-2 text-blue-100 no-underline bg-pinkish rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
+            class="font-poppins font-bold px-3 py-2 text-white no-underline bg-pinkish rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
             >HOME
           </a>
           <a
             href="./about.html"
-            class="px-3 py-2 text-blue-100 no-underline bg-pinkish rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
+            class="font-poppins font-bold px-3 py-2 text-white no-underline bg-pinkish rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
             >ABOUT
           </a>
-          <div class="grid gap-6 mb-6 md:grid-cols-2">
-            <div>
-                <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">medication</label>
-                <input type="text" id="drug_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required>
-            </div>
           <p id="currentDay"></p>
         </div>
       </div>
