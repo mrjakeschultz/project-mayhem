@@ -80,15 +80,18 @@
       </div>
     </nav>
 
+<!-- END OF NAVIGATION........ END OF NAVIGATION.......END OF NAVIGATION........-->
+
     <main class="mt-8 border-blueish border-4  flex justify-center rounded">
       <section class="bg-slate-400 m-4 mt-4 border rounded" id="amTimes">
-        <div class=" bg-yellowish  flex justify-center  rounded row m-2 2 2 2">
-          <div class="font-poppins time-block hour " id="1">12:00 AM</div>
+        <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+          <div class="font-poppins ml-2 time-block hour " id="1">12:00 AM</div>
           <div class="time-slot">
+            <input type="text" class="  absolute pl-10 pr-20 mb-2 mt-2 rounded-lg z-0 focus:shadow focus:outline-none" placeholder="enter drug name....">
             <textarea
-              class="rounded"
-              id="twelveAm"
-              placeholder="Add events here"
+              class="mt-1 mb-1 rounded"
+              id="twelveAmLS"
+              placeholder="store medication here..."
               class="calendar-item"
               rows="3"
               cols="48"
@@ -97,11 +100,12 @@
           <div class="saveBtn">
             <button
               id="12am"
-              class="bg-blueish hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
             >
               Save
             </button>
           </div>
+         
         </div>
         <div class="row">
           <div class="time-block hour" id="2">1:00 AM</div>
