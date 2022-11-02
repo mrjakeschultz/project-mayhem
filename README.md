@@ -17,7 +17,7 @@ Main repo for PawSafe Health app project
 
 ## Description ##
 
-A Repository for a weather dashboard built during the bootcamp at UTA, this project utilizes a weather forecast API as well as dynamically updated HTML and CSS.
+A Repository for PawSafe Health built during the bootcamp at UTA, which utilizes multiple API's to give your pets the medication they need.
 
 ### Usage ###
 
@@ -32,4 +32,6 @@ http://framebox.org/ARMbS
 
 ### Link To Application ###
 
-[Application-Link] 
+[Application-Link] https://mrjakeschultz.github.io/project-mayhem/
+
+[Repo-Link] https://github.com/mrjakeschultz/project-mayhem
