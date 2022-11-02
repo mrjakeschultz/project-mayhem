@@ -34,73 +34,96 @@
     </script>
   </head>
 
-  <body class="p-4">
+  <body class="bg-light_blueish p-4">
     <header class="">
-      <div class="flex bg-yellowish" id="headmain">
+      <div class=" flex bg-yellowish p-8 justify-center text-4xl text-blackish rounded-md" id="headmain">
         <img
           class="h-8 w-auto sm:h-10"
           src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
           alt="Paw and Pill in a Shape of a Heart"
         />
-        <h1 class="font-poppins text-3xl" id="banner">PawSafe Health</h1>
+        <h1 class="font-poppins font-bold text-4xl" id="banner">PawSafe Health</h1>
       </div>
       <div>
-        <p class="bg-yellowish w-70 text-sm" id="slogan">
-          Pet Medication Management
-        </p>
+        <h4 class="font-poppins font-bold text-center text-pinkish">Pet Medication Management
+        </h4>
       </div>
-
       <!-- WEATHER CONTAINER ...................WEATHER CONTAINER .......................-->
-
-      <div class="flex justify-center" id="weatherDashboardContainer">
-        <div class="border-gray-100 bg-gray-50" id="weather">
-          <h2 class="font-poppins text-xl">Weather in Austin</h2>
+      <div class="flex justify-center bg-blueish rounded" id="weatherDashboardContainer">
+        <div class="  mt-4 mb-4 " id="weather">
+          <h2 class="font-poppins text-white text-center text-2xl">Weather in Austin</h2>
         </div>
       </div>
     </header>
+
 
     <!-- END OF HEADER END OF HEADER END OF HEADER END OF HEADER END OF HEADER -->
 
     <nav>
       <!-- NAVIGATION CONTAINER -->
-
-      <div class="bg-yellowish flex mt-4 justify-center" id="navContainer">
+      <div class="bg-yellowish flex mt-4 justify-center rounded" id="navContainer">
         <div class="md:ml-10 md:block md:space-x-8 md:pr-4" id="navBar">
           <a
             href="#"
-            class="px-3 py-2 text-blue-100 no-underline bg-pinkish rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
+            class="font-poppins font-bold px-3 py-2 text-white no-underline bg-pinkish rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
             >HOME
           </a>
           <a
             href="./about.html"
-            class="px-3 py-2 text-blue-100 no-underline bg-pinkish rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
+            class="font-poppins font-bold px-3 py-2 text-white no-underline bg-pinkish rounded hover:bg-blue-600 hover:underline hover:text-blue-200"
             >ABOUT
           </a>
-          <div class="grid gap-6 mb-6 md:grid-cols-2">
-            <!-- <div>
-                <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">medication</label>
-                <input type="text" id="drug_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required>
-            </div> -->
-            <form autocomplete="off" action="/action_page.php">
-              <div class="autocomplete" style="width:300px;">
-                <input id="myInput" type="text" name="medication_name" placeholder="medication name">
-              </div>
-              <input type="submit">
-            </form> 
-          <p id="currentDay"></p>
-        </div>
+         
       </div>
     </nav>
-
-    <main class="mt-8 bg-red-400 flex justify-center container">
-      <section class="bg-slate-400 m-4 mt-4 border rounded" id="amTimes">
-        <div class=" bg-yellowish  flex justify-center rounded row m-2 2 2 2">
-          <div class="time-block hour" id="1">12:00 AM</div>
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+      <!-- <div>
+          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">medication</label>
+          <input type="text" id="drug_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required>
+      </div> -->
+      <form class="mt-6  " autocomplete="off" action="/action_page.php">
+        <div class=" flex autocomplete" style="width:300px;">
+          <input class="rounded z-0 focus:shadow focus:outline-none" id="myInput" type="text" name="medication_name" placeholder="medication name">
+          <div class="">
+            <button class=" font-poppins font-bold text-white ml-2 rounded bg-pinkish hover:bg-yellowish py-2 px-4 rounded" type="submit">SUBMIT</button>
+          </div>  
+        </div>  
+      </form> 
+    <p id="currentDay"></p>
+  </div>
+  <main class="mt-8 border-blueish border-4  flex justify-center rounded">
+    
+    <section class="bg-blueish m-4 mt-4 border rounded" id="amTimes">
+      <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+        <div class="font-poppins text-blackish ml-2 time-block hour " id="1">12:00 AM</div>
+        <div class="time-slot">
+          
+          <textarea
+            class="mt-1 mb-1 rounded"
+            id="twelveAmLS"
+            placeholder="store medication here..."
+            class="calendar-item"
+            rows="3"
+            cols="48"
+          ></textarea>
+        </div>
+        <div class="saveBtn">
+          <button
+            id="12am"
+            class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+          >
+            Save
+          </button>
+        </div>
+        </div>
+        <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+          <div class="font-poppins text-blackish ml-2 time-block hour " id="1">1:00 AM</div>
           <div class="time-slot">
+            
             <textarea
-              class="rounded"
-              id="twelveAm"
-              placeholder="Add events here"
+              class="mt-1 mb-1 rounded"
+              id="oneAm"
+              placeholder="store medication here..."
               class="calendar-item"
               rows="3"
               cols="48"
@@ -108,190 +131,247 @@
           </div>
           <div class="saveBtn">
             <button
-              id="12am"
-              class="bg-blueish hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              id="1am"
+              class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
             >
               Save
             </button>
           </div>
-        </div>
-        <div class="row">
-          <div class="time-block hour" id="2">1:00 AM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="oneAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
           </div>
-          <div class="col-2 saveBtn">
-            <button id="1am" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="3">2:00 AM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="twoAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="2am" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="4">3:00 AM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="threeAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="3am" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="5">4:00 AM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="fourAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="4am" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="6">5:00 AM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="fiveAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="5am" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="7">6:00 AM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="sixAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="6am" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="8">7:00 AM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="sevenAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="7am" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="9">8:00 AM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="eightAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="8am" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="10">9:00 AM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="nineAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="9am" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="11">10:00 AM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="tenAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="10am" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="12">11:00 AM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="elevenAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="11am" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
+       
+          <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+            <div class="font-poppins text-blackish ml-2 time-block hour " id="1">2:00 AM</div>
+            <div class="time-slot">
+              
+              <textarea
+                class="mt-1 mb-1 rounded"
+                id="twoAm"
+                placeholder="store medication here..."
+                class="calendar-item"
+                rows="3"
+                cols="48"
+              ></textarea>
+            </div>
+            <div class="saveBtn">
+              <button
+                id="2am"
+                class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+              >
+                Save
+              </button>
+            </div>
+            </div>
+            <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+              <div class="font-poppins text-blackish ml-2 time-block hour " id="1">3:00 AM</div>
+              <div class="time-slot">
+                
+                <textarea
+                  class="mt-1 mb-1 rounded"
+                  id="threeAm"
+                  placeholder="store medication here..."
+                  class="calendar-item"
+                  rows="3"
+                  cols="48"
+                ></textarea>
+              </div>
+              <div class="saveBtn">
+                <button
+                  id="3am"
+                  class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                >
+                  Save
+                </button>
+              </div>
+              </div>
+              <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                <div class="font-poppins text-blackish ml-2 time-block hour " id="1">4:00 AM</div>
+                <div class="time-slot">
+                  
+                  <textarea
+                    class="mt-1 mb-1 rounded"
+                    id="fourAm"
+                    placeholder="store medication here..."
+                    class="calendar-item"
+                    rows="3"
+                    cols="48"
+                  ></textarea>
+                </div>
+                <div class="saveBtn">
+                  <button
+                    id="4am"
+                    class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                  >
+                    Save
+                  </button>
+                </div>
+                </div>
+                <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                  <div class="font-poppins text-blackish ml-2 time-block hour " id="1">5:00 AM</div>
+                  <div class="time-slot">
+                    
+                    <textarea
+                      class="mt-1 mb-1 rounded"
+                      id="fiveAm"
+                      placeholder="store medication here..."
+                      class="calendar-item"
+                      rows="3"
+                      cols="48"
+                    ></textarea>
+                  </div>
+                  <div class="saveBtn">
+                    <button
+                      id="5am"
+                      class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                    >
+                      Save
+                    </button>
+                  </div>
+                  </div>
+                  <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                    <div class="font-poppins text-blackish ml-2 time-block hour " id="1">6:00 AM</div>
+                    <div class="time-slot">
+                      
+                      <textarea
+                        class="mt-1 mb-1 rounded"
+                        id="sixAm"
+                        placeholder="store medication here..."
+                        class="calendar-item"
+                        rows="3"
+                        cols="48"
+                      ></textarea>
+                    </div>
+                    <div class="saveBtn">
+                      <button
+                        id="6am"
+                        class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                      >
+                        Save
+                      </button>
+                    </div>
+                    </div>
+                    <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                      <div class="font-poppins text-blackish ml-2 time-block hour " id="1">7:00 AM</div>
+                      <div class="time-slot">
+                        
+                        <textarea
+                          class="mt-1 mb-1 rounded"
+                          id="sevenAm"
+                          placeholder="store medication here..."
+                          class="calendar-item"
+                          rows="3"
+                          cols="48"
+                        ></textarea>
+                      </div>
+                      <div class="saveBtn">
+                        <button
+                          id="7am"
+                          class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                        >
+                          Save
+                        </button>
+                      </div>
+                      </div>
+                      <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                        <div class="font-poppins text-blackish ml-2 time-block hour " id="1">8:00 AM</div>
+                        <div class="time-slot">
+                          
+                          <textarea
+                            class="mt-1 mb-1 rounded"
+                            id="eightAm"
+                            placeholder="store medication here..."
+                            class="calendar-item"
+                            rows="3"
+                            cols="48"
+                          ></textarea>
+                        </div>
+                        <div class="saveBtn">
+                          <button
+                            id="8am"
+                            class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                          >
+                            Save
+                          </button>
+                        </div>
+                        </div>
+                        <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                          <div class="font-poppins text-blackish ml-2 time-block hour " id="1">9:00 AM</div>
+                          <div class="time-slot">
+                            
+                            <textarea
+                              class="mt-1 mb-1 rounded"
+                              id="nineAm"
+                              placeholder="store medication here..."
+                              class="calendar-item"
+                              rows="3"
+                              cols="48"
+                            ></textarea>
+                          </div>
+                          <div class="saveBtn">
+                            <button
+                              id="9am"
+                              class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                            >
+                              Save
+                            </button>
+                          </div>
+                          </div>
+                          <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                            <div class="font-poppins text-blackish ml-2 time-block hour " id="1">10:00 AM</div>
+                            <div class="time-slot">
+                              
+                              <textarea
+                                class="mt-1 mb-1 rounded"
+                                id="tenAm"
+                                placeholder="store medication here..."
+                                class="calendar-item"
+                                rows="3"
+                                cols="48"
+                              ></textarea>
+                            </div>
+                            <div class="saveBtn">
+                              <button
+                                id="10am"
+                                class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                              >
+                                Save
+                              </button>
+                            </div>
+                            </div>
+                            <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                              <div class="font-poppins text-blackish ml-2 time-block hour " id="1">11:00 AM</div>
+                              <div class="time-slot">
+                                
+                                <textarea
+                                  class="mt-1 mb-1 rounded"
+                                  id="elevenAm"
+                                  placeholder="store medication here..."
+                                  class="calendar-item"
+                                  rows="3"
+                                  cols="48"
+                                ></textarea>
+                              </div>
+                              <div class="saveBtn">
+                                <button
+                                  id="11am"
+                                  class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                                >
+                                  Save
+                                </button>
+                              </div>
+                              </div>
       </section>
 
       <!-- SECTION 2 -->
 
-      <section class="bg-slate-200 m-4 mt-4 border rounded" id="pmTimes">
-        <div class="row">
-          <div class="time-block hour" id="1">12:00 PM</div>
+      <section class="bg-blueish m-4 mt-4 border rounded" id="pmTimes">
+        <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+          <div class="font-poppins text-blackish ml-2 time-block hour " id="1">12:00 PM</div>
           <div class="time-slot">
+            
             <textarea
-              class="rounded-xl"
-              id="twelveAm"
-              placeholder="Add events here"
+              class="mt-1 mb-1 rounded"
+              id="twelvePM"
+              placeholder="store medication here..."
               class="calendar-item"
               rows="3"
               cols="48"
@@ -300,182 +380,263 @@
           <div class="saveBtn">
             <button
               id="12pm"
-              class="bg-blueish hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
             >
               Save
             </button>
           </div>
-        </div>
-        <div class="row">
-          <div class="time-block hour" id="2">1:00 PM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="oneAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
           </div>
-          <div class="col-2 saveBtn">
-            <button id="1pm" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="3">2:00 PM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="twoAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="2pm" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="4">3:00 PM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="threeAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="3pm" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="5">4:00 PM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="fourAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="4pm" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="6">5:00 PM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="fiveAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="5pm" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="7">6:00 PM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="sixAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="6pm" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="8">7:00 PM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="sevenAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="7pm" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="9">8:00 PM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="eightAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="8pm" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="10">9:00 PM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="nineAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="9pm" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="11">10:00 PM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="tenAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="10pm" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2 time-block hour" id="12">11:00 PM</div>
-          <div class="col-8 time-slot">
-            <textarea
-              id="elevenAm"
-              placeholder="Add events here"
-              class="calendar-item"
-              rows="3"
-              cols="48"
-            ></textarea>
-          </div>
-          <div class="col-2 saveBtn">
-            <button id="11pm" class="btn btn-secondary">Save</button>
-          </div>
-        </div>
+          <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+            <div class="font-poppins text-blackish ml-2 time-block hour " id="1">1:00 PM</div>
+            <div class="time-slot">
+              
+              <textarea
+                class="mt-1 mb-1 rounded"
+                id="onePm"
+                placeholder="store medication here..."
+                class="calendar-item"
+                rows="3"
+                cols="48"
+              ></textarea>
+            </div>
+            <div class="saveBtn">
+              <button
+                id="1pm"
+                class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+              >
+                Save
+              </button>
+            </div>
+            </div>
+         
+            <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+              <div class="font-poppins text-blackish ml-2 time-block hour " id="1">2:00 PM</div>
+              <div class="time-slot">
+                
+                <textarea
+                  class="mt-1 mb-1 rounded"
+                  id="twoPm"
+                  placeholder="store medication here..."
+                  class="calendar-item"
+                  rows="3"
+                  cols="48"
+                ></textarea>
+              </div>
+              <div class="saveBtn">
+                <button
+                  id="2Pm"
+                  class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                >
+                  Save
+                </button>
+              </div>
+              </div>
+              <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                <div class="font-poppins text-blackish ml-2 time-block hour " id="1">3:00 PM</div>
+                <div class="time-slot">
+                  
+                  <textarea
+                    class="mt-1 mb-1 rounded"
+                    id="threePm"
+                    placeholder="store medication here..."
+                    class="calendar-item"
+                    rows="3"
+                    cols="48"
+                  ></textarea>
+                </div>
+                <div class="saveBtn">
+                  <button
+                    id="3Pm"
+                    class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                  >
+                    Save
+                  </button>
+                </div>
+                </div>
+                <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                  <div class="font-poppins text-blackish ml-2 time-block hour " id="1">4:00 PM</div>
+                  <div class="time-slot">
+                    
+                    <textarea
+                      class="mt-1 mb-1 rounded"
+                      id="fourPm"
+                      placeholder="store medication here..."
+                      class="calendar-item"
+                      rows="3"
+                      cols="48"
+                    ></textarea>
+                  </div>
+                  <div class="saveBtn">
+                    <button
+                      id="4pm"
+                      class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                    >
+                      Save
+                    </button>
+                  </div>
+                  </div>
+                  <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                    <div class="font-poppins text-blackish ml-2 time-block hour " id="1">5:00 PM</div>
+                    <div class="time-slot">
+                      
+                      <textarea
+                        class="mt-1 mb-1 rounded"
+                        id="fivePm"
+                        placeholder="store medication here..."
+                        class="calendar-item"
+                        rows="3"
+                        cols="48"
+                      ></textarea>
+                    </div>
+                    <div class="saveBtn">
+                      <button
+                        id="5pm"
+                        class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                      >
+                        Save
+                      </button>
+                    </div>
+                    </div>
+                    <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                      <div class="font-poppins text-blackish ml-2 time-block hour " id="1">6:00 PM</div>
+                      <div class="time-slot">
+                        
+                        <textarea
+                          class="mt-1 mb-1 rounded"
+                          id="sixPm"
+                          placeholder="store medication here..."
+                          class="calendar-item"
+                          rows="3"
+                          cols="48"
+                        ></textarea>
+                      </div>
+                      <div class="saveBtn">
+                        <button
+                          id="6Pm"
+                          class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                        >
+                          Save
+                        </button>
+                      </div>
+                      </div>
+                      <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                        <div class="font-poppins text-blackish ml-2 time-block hour " id="1">7:00 PM</div>
+                        <div class="time-slot">
+                          
+                          <textarea
+                            class="mt-1 mb-1 rounded"
+                            id="sevenPm"
+                            placeholder="store medication here..."
+                            class="calendar-item"
+                            rows="3"
+                            cols="48"
+                          ></textarea>
+                        </div>
+                        <div class="saveBtn">
+                          <button
+                            id="7pm"
+                            class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                          >
+                            Save
+                          </button>
+                        </div>
+                        </div>
+                        <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                          <div class="font-poppins text-blackish ml-2 time-block hour " id="1">8:00 PM</div>
+                          <div class="time-slot">
+                            
+                            <textarea
+                              class="mt-1 mb-1 rounded"
+                              id="eightPm"
+                              placeholder="store medication here..."
+                              class="calendar-item"
+                              rows="3"
+                              cols="48"
+                            ></textarea>
+                          </div>
+                          <div class="saveBtn">
+                            <button
+                              id="8pm"
+                              class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                            >
+                              Save
+                            </button>
+                          </div>
+                          </div>
+                          <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                            <div class="font-poppins text-blackish ml-2 time-block hour " id="1">9:00 PM</div>
+                            <div class="time-slot">
+                              
+                              <textarea
+                                class="mt-1 mb-1 rounded"
+                                id="ninePm"
+                                placeholder="store medication here..."
+                                class="calendar-item"
+                                rows="3"
+                                cols="48"
+                              ></textarea>
+                            </div>
+                            <div class="saveBtn">
+                              <button
+                                id="9pm"
+                                class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                              >
+                                Save
+                              </button>
+                            </div>
+                            </div>
+                            <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                              <div class="font-poppins text-blackish ml-2 time-block hour " id="1">10:00 PM</div>
+                              <div class="time-slot">
+                                
+                                <textarea
+                                  class="mt-1 mb-1 rounded"
+                                  id="tenPm"
+                                  placeholder="store medication here..."
+                                  class="calendar-item"
+                                  rows="3"
+                                  cols="48"
+                                ></textarea>
+                              </div>
+                              <div class="saveBtn">
+                                <button
+                                  id="10pm"
+                                  class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                                >
+                                  Save
+                                </button>
+                              </div>
+                              </div>
+                              <div class=" bg-yellowish  flex  items-center space-x-6 rounded row m-2 2 2 2">
+                                <div class="font-poppins text-blackish ml-2 time-block hour " id="1">11:00 PM</div>
+                                <div class="time-slot">
+                                  
+                                  <textarea
+                                    class="mt-1 mb-1 rounded"
+                                    id="elevenPm"
+                                    placeholder="store medication here..."
+                                    class="calendar-item"
+                                    rows="3"
+                                    cols="48"
+                                  ></textarea>
+                                </div>
+                                <div class="saveBtn">
+                                  <button
+                                    id="11pm"
+                                    class="bg-blueish hover:bg-blue-700 text-white mr-2 font-bold py-2 px-4 rounded"
+                                  >
+                                    Save
+                                  </button>
+                                </div>
+                                </div>
       </section>
     </main>
 
     <footer class="mt-5 mb-b border-t border-slate-200" id="footerContainer">
       <h5>Copyright © 2022 ProjectMayhem UTA BootCamp.</h5>
+      <p>
+        API autocomplete search was utilized by https://www.w3schools.com/howto/howto_js_autocomplete.asp
+      </p>
     </footer>
   </body>
 
